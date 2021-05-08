@@ -39,3 +39,11 @@
   font-style: italic;
   src: url('./assets/fonts/SourceSansPro-LightItalic.ttf');
 }
+
+body {
+  margin: 0;
+  height: 100%;
+  width: calc(100% - 40px);
+  padding: 20px;
+  background-color: #e8f4ff;
+}

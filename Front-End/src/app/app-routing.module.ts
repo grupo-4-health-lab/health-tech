@@ -1,22 +1,29 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IndexComponent } from './index/index.page';
+// Components
+import { PasswordResetComponent } from './password-reset/password-reset.page';
+import { LoginComponent } from './login/login.page';
+import { NotFoundComponent } from './not-found/not-found.page';
 
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'password-reset',
+    component: PasswordResetComponent,
+  },
+  {
     path: '',
-    component: IndexComponent,
-    children: [
-      {
-        path: 'login',
-        component: IndexComponent
-      },
-      {
-        path: 'password-reset',
-        component: IndexComponent
-      }
-    ]
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

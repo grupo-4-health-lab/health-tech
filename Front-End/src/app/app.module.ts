@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { IndexComponent } from './index/index.page';
+import { PasswordResetComponent } from './password-reset/password-reset.page';
+import { LoginComponent } from './login/login.page';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    PasswordResetComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
