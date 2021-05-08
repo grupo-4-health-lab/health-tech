@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    overflow: hidden;
+    height: calc(100% - 64px);
+
+    system-side-menu {
+        width: 25%;
+    }
+
+    system-main-content {
+        width: 75%;
+    }
+}

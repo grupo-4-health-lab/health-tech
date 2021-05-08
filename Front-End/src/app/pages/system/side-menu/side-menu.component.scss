@@ -1,0 +1,38 @@
+@import '../../../variables.scss';
+
+.side-menu {
+    width: calc(100% - 48px);
+    margin-left: 48px;
+    padding: 16px 0;
+    border-radius: 4px;
+    background-color: #fff;
+
+    &__header {
+        font-size: 22pt;
+        font-family: 'Lato';
+        font-weight: 700;
+        padding-bottom: 12px;
+        margin: 0 24px 12px;
+        border-bottom: 1px solid #e4e4e4;
+        color: $title-color;
+    }
+
+    &__body {
+
+    }
+
+    &__item {
+        padding: 12px 0 12px 24px;
+        width: calc(100% - 24px);
+        display: block;
+        font-family: 'SourceSans';
+        font-weight: 700;
+        color: $label-color;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

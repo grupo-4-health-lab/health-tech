@@ -19,8 +19,7 @@ const routes: Routes = [
     },
     {
         path: 'system',
-        component: SystemComponent,
-        children: []
+        component: SystemComponent
     },
     {
         path: '',
