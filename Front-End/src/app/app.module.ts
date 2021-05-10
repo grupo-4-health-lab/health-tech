@@ -8,25 +8,19 @@ import { AppComponent } from './app.component';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 
-// Page Components
-import { LoginComponent } from './pages/login/login.page';
-import { NotFoundComponent } from './pages/not-found/not-found.page';
-
 // Page Modules
+import { AuthModule } from './pages/auth/auth.module';
 import { SystemModule } from './pages/system/system.module';
-import { PasswordResetModule } from './pages/password-reset/password-reset.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        LoginComponent,
-        NotFoundComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         SystemModule,
-        PasswordResetModule
+        AuthModule
     ],
     providers: [
         UserService,

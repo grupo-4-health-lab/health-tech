@@ -1,0 +1,16 @@
+<div class="auth-card__header">
+    <label class="auth-card__header__title">Esqueci a senha</label>
+    <p class="auth-card__header__description">Insira seu email abaixo para envio do link de confirmação</p>
+</div>
+<div class="auth-card__body">
+    <form>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" alt="Email" placeholder="Insira seu email" />
+        </div>
+        <div class="form-controls">
+            <button type="button" routerLink="/auth/login">Voltar</button>
+            <button type="button" class="primary" [routerLink]="['/auth/password-reset', '123']">Enviar</button>
+        </div>
+    </form>
+</div>
