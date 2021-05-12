@@ -1,17 +1,13 @@
+
 // Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// Components
-import { SystemComponent } from './pages/system/system.page';
-
+// Module Components
 import { AuthModule } from '../app/pages/auth/auth.module';
+import { SystemModule } from './pages/system/system.module';
 
 const routes: Routes = [
-    {
-        path: 'system',
-        component: SystemComponent
-    },
     {
         path: '',
         redirectTo: 'auth/login',
@@ -27,6 +23,7 @@ const routes: Routes = [
 @NgModule({
     imports: [
         AuthModule,
+        SystemModule,
         RouterModule.forRoot(routes),
     ],
     exports: [RouterModule]

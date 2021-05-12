@@ -1,13 +1,64 @@
+@import '../../../variables.scss';
+
 main {
     display: flex;
     overflow: hidden;
-    height: calc(100% - 64px);
+    height: 100%;
+    background-color: $tertiary-color;
 
     system-side-menu {
-        width: 25%;
+        width: 192px;
     }
 
-    system-main-content {
-        width: 75%;
+    section {
+        width: calc(100% - 192px);
+        border-top-left-radius: 56px;
+        background-color: #f9fcff;
+        box-shadow: 0px 2px 20px #0a327b;
+        z-index: 1;
+
+        system-main-content {
+            padding: 36px 24px;
+            width: calc(100% - 48px);
+            height: calc(100% - 134px);
+            display: block;
+        }
     }
 }
+
+// Desktop
+@media screen and (max-width: 1440px) {
+}
+
+// Laptops
+@media screen and (max-width: 1280px) {
+    system-side-menu {
+        width: 30%;
+    }
+
+    section {
+        width: 70%;
+    }
+}
+
+// Tablets
+@media screen and (max-width: 768px) {
+    system-side-menu {
+        width: 65%;
+    }
+}
+
+// High-resolution mobile
+@media screen and (max-width: 640px) {
+    system-side-menu {
+        width: 70%;
+    }
+}
+
+// Low-resolution mobile
+@media screen and (max-width: 384px) {
+    system-side-menu {
+        width: 80%;
+    }
+}
+

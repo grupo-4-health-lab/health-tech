@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Modules
+import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
+
 // Services
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
@@ -20,11 +23,14 @@ import { SystemModule } from './pages/system/system.module';
         BrowserModule,
         AppRoutingModule,
         SystemModule,
-        AuthModule
+        AuthModule,
+        IconModule,
+        IconSetModule.forRoot()
     ],
     providers: [
         UserService,
-        AuthService
+        AuthService,
+        IconSetService
     ],
     bootstrap: [AppComponent]
 })

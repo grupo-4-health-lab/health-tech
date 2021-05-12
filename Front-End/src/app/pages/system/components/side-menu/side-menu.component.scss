@@ -1,0 +1,101 @@
+@import '../../../../../variables.scss';
+
+.side-menu {
+    width: 100%;
+    height: calc(100% - 32px);
+    padding: 16px 0;
+    background-color: $tertiary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+        text-align: center;
+
+        img {
+            width: 48px;
+            height: 48px;
+            margin: 16px auto;
+        }
+    }
+
+    &__body {
+        margin: 0 24px 24px;
+        padding-bottom: 24px;
+        border-bottom: 2px solid #3a6bc5;
+    }
+
+    &__item {
+        padding: 18px 0;
+        width: 100%;
+        display: flex;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 14px;
+        color: $light-color;
+        cursor: pointer;
+        transition: .2s color;
+        text-decoration: none;
+
+        c-icon {
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover {
+            color: #b0ccff;
+        }
+
+        &--active {
+            color: #fff;
+        }
+    }
+
+    &__user {
+        width: calc(100% - 48px);
+        padding: 12px 24px;
+        display: flex;
+
+        &__avatar {
+            width: 38px;
+            height: 38px;
+            margin: auto 0;
+
+            img {
+                width: 36px;
+                height: 36px;
+                border-radius: 100%;
+                border: 2px solid #fff;
+            }
+        }
+
+        &__options {
+            width: calc(100% - 48px);
+            margin-left: 12px;
+
+            label {
+                font-family: 'Poppins';
+                font-weight: 500;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            a {
+                margin-top: 8px;
+                font-family: 'Poppins';
+                font-weight: 500;
+                color: $light-color;
+                font-size: 14px;
+                display: flex;
+                cursor: pointer;
+                text-decoration: none;
+
+                c-icon {
+                    margin-right: 8px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
