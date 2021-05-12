@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 // Components
-import { HeaderTitleComponent } from './components/header-title/header-title.component';
-import { MainContentComponent } from './components/main-content/main-content.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { HeaderTitleComponent } from './main-components/header-title/header-title.component';
+import { MainContentComponent } from './main-components/main-content/main-content.component';
+import { SideMenuComponent } from './main-components/side-menu/side-menu.component';
 import { SystemComponent } from './system.page';
 
-// Child Pages
-import { DashboardComponent } from './pages/dashboard/dashboard.page';
+// Child Components
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
