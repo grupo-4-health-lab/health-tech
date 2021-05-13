@@ -26,39 +26,23 @@ main {
     }
 }
 
-// Desktop
-@media screen and (max-width: 1440px) {
-}
+// IPad
+@media screen and (max-width: 1024px) {
+    main {
+        system-side-menu {
+            width: unset;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
 
-// Laptops
-@media screen and (max-width: 1280px) {
-    system-side-menu {
-        width: 30%;
-    }
-
-    section {
-        width: 70%;
-    }
-}
-
-// Tablets
-@media screen and (max-width: 768px) {
-    system-side-menu {
-        width: 65%;
-    }
-}
-
-// High-resolution mobile
-@media screen and (max-width: 640px) {
-    system-side-menu {
-        width: 70%;
-    }
-}
-
-// Low-resolution mobile
-@media screen and (max-width: 384px) {
-    system-side-menu {
-        width: 80%;
+        section {
+            width: 100%;
+            border-top-left-radius: 0;
+            box-shadow: 0;
+            z-index: 0;
+        }
     }
 }
 

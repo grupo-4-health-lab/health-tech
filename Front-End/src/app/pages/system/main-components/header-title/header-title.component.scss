@@ -7,3 +7,12 @@ header {
         width: 192px;
     }
 }
+
+// IPad
+@media screen and (max-width: 1024px) {
+    header {
+        img {
+            width: 168px;
+        }
+    }
+}
