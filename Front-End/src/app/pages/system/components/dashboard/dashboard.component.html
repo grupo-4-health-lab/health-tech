@@ -1,1 +1,64 @@
-<span>oi</span>
+<div class="box-group">
+    <div class="box">
+        <div class="box__header">
+            <div class="box__header__title">
+                <c-icon name="cil-pen" size="lg"></c-icon>
+                <h2>Absenteísmo</h2>
+            </div>
+            <span>Dados informativos sobre absenteísmo</span>
+        </div>
+        <dashboard-chart [chartDetail]="chart"></dashboard-chart>
+    </div>
+
+    <div class="box">
+        <div class="box__header">
+            <div class="box__header__title">
+                <c-icon name="cil-group" size="lg"></c-icon>
+                <h2>Quantidade de Colaboradores</h2>
+            </div>
+            <span>Dados informativos sobre quantidade de colaboradores</span>
+        </div>
+        <dashboard-chart [chartDetail]="chart2"></dashboard-chart>
+    </div>
+
+    <div class="box">
+        <div class="box__header">
+            <div class="box__header__title">
+                <c-icon name="cil-burn" size="lg"></c-icon>
+                <h2>Riscos Ocupacionais</h2>
+            </div>
+            <span>Dados informativos sobre riscos ocupacionais</span>
+        </div>
+        <dashboard-chart [chartDetail]="chart3"></dashboard-chart>
+    </div>
+
+    <div class="box">
+        <div class="box__header">
+            <div class="box__header__title">
+                <c-icon name="cil-newspaper" size="lg"></c-icon>
+                <h2>Comunicados Internos</h2>
+            </div>
+            <span>Últimas atualizações</span>
+        </div>
+        <div class="box__body">
+            <ng-container *ngFor="let message of messageList">
+                <div class="box__body__message"
+                    [ngClass]="{
+                        'box__body__message--alert': message.type === 2,
+                        'box__body__message--warn': message.type === 3
+                    }">
+                    <div>
+                        <p>{{message.text}}</p>
+                        <span>{{message.date.toLocaleString('pt-BR')}}</span>
+                    </div>
+                    <ng-container *ngIf="message.type === 2">
+                        <c-icon name="cil-info" size="lg"></c-icon>
+                    </ng-container>
+                    <ng-container *ngIf="message.type === 3">
+                        <c-icon name="cil-warning" size="lg"></c-icon>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

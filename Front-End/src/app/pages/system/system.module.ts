@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 // Components
 import { HeaderTitleComponent } from './main-components/header-title/header-title.component';
@@ -11,6 +12,7 @@ import { SystemComponent } from './system.page';
 
 // Child Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChartBoxComponent } from './components/dashboard/chart-box/chart-box.component';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
@@ -38,10 +40,13 @@ const routes: Routes = [
         HeaderTitleComponent,
         MainContentComponent,
         SideMenuComponent,
+        DashboardComponent,
+        ChartBoxComponent,
         SystemComponent
     ],
     imports: [
         CommonModule,
+        NgApexchartsModule,
         RouterModule.forChild(routes),
         IconModule
     ],
