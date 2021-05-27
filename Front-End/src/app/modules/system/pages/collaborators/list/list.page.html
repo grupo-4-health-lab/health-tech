@@ -1,0 +1,62 @@
+<div class="page-header">
+    <div class="page-header__info">
+        <h1 class="page-header__info__title">
+            Colaboradores
+        </h1>
+        <p class="page-header__info__subtitle">
+            Lista de colaboradores
+        </p>
+    </div>
+    <div class="page-header__options">
+        <button class="primary">Novo</button>
+    </div>
+</div>
+
+<div class="table-content">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Cargo
+                </th>
+                <th>
+                    E-mail
+                </th>
+                <th>
+                    CPF
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>
+                    {{ user.name }}
+                </td>
+                <td>
+                    {{ user.field }}
+                </td>
+                <td>
+                    {{ user.email }}
+                </td>
+                <td>
+                    {{ user.cpf }}
+                </td>
+                <td>
+                    {{ user.state }}
+                </td>
+                <td class="row-option">
+                    <button class="secondary">Editar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

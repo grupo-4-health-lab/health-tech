@@ -29,6 +29,10 @@ const routes: Routes = [
                 component: DashboardComponent
             },
             {
+                path: 'collaborators',
+                loadChildren: () => import('./pages/collaborators/collaborators.module').then(c => c.CollaboratorsModule)
+            },
+            {
                 path: '',
                 redirectTo: 'dashboard',
                 pathMatch: 'full'

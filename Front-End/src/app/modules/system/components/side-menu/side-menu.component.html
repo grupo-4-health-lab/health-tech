@@ -4,11 +4,11 @@
     </div>
     <div class="side-menu__content">
         <div class="side-menu__body">
-            <a class="side-menu__item" routerLink="/system/dashboard" routerLinkActive="side-menu__item--active">
+            <a class="side-menu__item" (click)="toggleMenu()" routerLink="/system/dashboard" routerLinkActive="side-menu__item--active">
                 <c-icon name="cil-home" size="lg"></c-icon>
                 <span>Início</span>
             </a>
-            <a class="side-menu__item">
+            <a class="side-menu__item" (click)="toggleMenu()" routerLink="/system/collaborators" routerLinkActive="side-menu__item--active">
                 <c-icon name="cil-group" size="lg"></c-icon>
                 <span>Colaboradores</span>
             </a>
