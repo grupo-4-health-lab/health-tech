@@ -2,7 +2,8 @@
 
 main {
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: 100%;
     background-color: $tertiary-color;
 
@@ -18,9 +19,10 @@ main {
         z-index: 1;
 
         system-main-content {
-            padding: 36px 24px;
+            padding: 24px;
             width: calc(100% - 48px);
-            height: calc(100% - 134px);
+            min-height: calc(100% - 114px);
+            overflow-y: auto;
             display: block;
         }
     }
@@ -42,6 +44,7 @@ main {
             border-top-left-radius: 0;
             box-shadow: 0;
             z-index: 0;
+            display: grid;
         }
     }
 }

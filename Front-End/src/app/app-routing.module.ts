@@ -1,11 +1,11 @@
 
 // Modules
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // Module Components
-import { AuthModule } from '../app/pages/auth/auth.module';
-import { SystemModule } from './pages/system/system.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { SystemModule } from './modules/system/system.module';
 
 const routes: Routes = [
     {
@@ -24,8 +24,10 @@ const routes: Routes = [
     imports: [
         AuthModule,
         SystemModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     ],
-    exports: [RouterModule]
+    exports: [
+        RouterModule
+    ]
 })
 export class AppRoutingModule { }

@@ -1,8 +1,9 @@
 // Ng Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Modules
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
@@ -10,10 +11,11 @@ import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular
 // Services
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { ChartService } from './services/chart.service';
 
 // Page Modules
-import { AuthModule } from './pages/auth/auth.module';
-import { SystemModule } from './pages/system/system.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { SystemModule } from './modules/system/system.module';
 
 @NgModule({
     declarations: [
@@ -25,13 +27,21 @@ import { SystemModule } from './pages/system/system.module';
         SystemModule,
         AuthModule,
         IconModule,
+        FormsModule,
+        ReactiveFormsModule,
         IconSetModule.forRoot()
     ],
     providers: [
         UserService,
         AuthService,
+        ChartService,
         IconSetService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ]
 })
 export class AppModule { }

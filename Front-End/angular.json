@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,15 +65,15 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "health-tech:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "health-tech:build:production"
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+                "browserTarget": "health-tech:build"
+            },
+            "configurations": {
+                "production": {
+                    "browserTarget": "health-tech:build:production"
+                }
             }
-          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
