@@ -1,4 +1,4 @@
-<section class="side-menu">
+<section class="side-menu" [ngClass]="{ 'side-menu--open': opened }">
     <div class="side-menu__header">
         <img src="../../../../assets/imgs/mini.png"/>
     </div>
@@ -35,3 +35,7 @@
         </div>
     </div>
 </section>
+<div class="side-menu__backdrop" (click)="toggleMenu()" [ngClass]="{ 'side-menu__backdrop--active': opened }"></div>
+<button class="side-menu__toggle" (click)="toggleMenu()" [ngClass]="{ 'side-menu__toggle--hidden': opened }">
+    <c-icon name="cil-hamburger-menu" size="xl"></c-icon>
+</button>
