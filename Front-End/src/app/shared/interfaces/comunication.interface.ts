@@ -1,4 +1,4 @@
-import { EMessageType } from './../enums/communication.enum';
+import { EMessageType } from '../enums/communication.enum';
 
 export interface ICommunicationMessage {
     text: string;

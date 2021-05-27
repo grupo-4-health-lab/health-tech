@@ -1,6 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
-import { IChartOptions, IChartBox } from 'src/app/interfaces/chart.interface';
+import { IChartOptions, IChartBox } from 'src/app/shared/interfaces/chart.interface';
 import { ChartService } from './../../../../../services/chart.service';
 
 @Component({

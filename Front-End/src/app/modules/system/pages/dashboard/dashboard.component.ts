@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IconSetService } from '@coreui/icons-angular';
 import { cilBurn, cilPen, cilGroup, cilNewspaper, cilInfo, cilWarning } from '@coreui/icons';
 
-import { IChartBox } from 'src/app/interfaces/chart.interface';
-import { ICommunicationMessage } from './../../../../interfaces/comunication.interface';
-import { EMessageType } from 'src/app/enums/communication.enum';
+import { IChartBox } from 'src/app/shared/interfaces/chart.interface';
+import { ICommunicationMessage } from '../../../../shared/interfaces/comunication.interface';
+import { EMessageType } from 'src/app/shared/enums/communication.enum';
 
 @Component({
   selector: 'system-dashboard',

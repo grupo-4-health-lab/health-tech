@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IChartOptions, IChartBox } from '../interfaces/chart.interface';
+import { IChartOptions, IChartBox } from '../shared/interfaces/chart.interface';
 
 @Injectable({
   providedIn: 'root',

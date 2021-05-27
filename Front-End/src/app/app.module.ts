@@ -1,10 +1,9 @@
 // Ng Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Modules
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
@@ -15,8 +14,8 @@ import { AuthService } from './services/auth.service';
 import { ChartService } from './services/chart.service';
 
 // Page Modules
-import { AuthModule } from './pages/auth/auth.module';
-import { SystemModule } from './pages/system/system.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { SystemModule } from './modules/system/system.module';
 
 @NgModule({
     declarations: [
@@ -38,6 +37,11 @@ import { SystemModule } from './pages/system/system.module';
         ChartService,
         IconSetService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ]
 })
 export class AppModule { }
