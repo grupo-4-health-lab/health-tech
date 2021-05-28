@@ -29,22 +29,22 @@ main {
     }
 }
 
-::ng-deep .form-group input {
+system-main-content::ng-deep .form-group input {
     height: 20px;
 }
 
-::ng-deep .form-group label {
+system-main-content::ng-deep .form-group label {
     font-size: 14px;
     color: $label-color;
 }
 
-::ng-deep .form-group input,
-::ng-deep .form-group select,
-::ng-deep .form-group textarea {
+system-main-content::ng-deep .form-group input,
+system-main-content::ng-deep .form-group select,
+system-main-content::ng-deep .form-group textarea {
     background-color: #f9fcff;
 }
 
-::ng-deep form {
+system-main-content::ng-deep form {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -55,7 +55,7 @@ main {
     }
 }
 
-::ng-deep .form-controls {
+system-main-content::ng-deep .form-controls {
     margin: 12px 0 18px;
     justify-content: flex-end;
 
@@ -88,11 +88,11 @@ main {
 
 // High-resolution mobiles
 @media screen and (max-width: 640px) {
-    ::ng-deep form .form-group {
+    system-main-content::ng-deep form .form-group {
         width: 100%;
     }
 
-    ::ng-deep form {
+    system-main-content::ng-deep form {
         display: block;
 
         .form-group {
