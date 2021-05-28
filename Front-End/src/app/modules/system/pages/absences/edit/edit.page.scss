@@ -1,0 +1,8 @@
+form .form-group {
+   width: 250px;
+}
+
+form input:read-only:hover,
+form select:read-only:hover {
+   cursor: not-allowed;
+}

@@ -1,0 +1,81 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Editar Função
+       </h1>
+       <p class="page-header__info__subtitle">
+           Alteração dos dados de {{ job.job_name || '' }}
+       </p>
+   </div>
+</div>
+
+<form [formGroup]="dataForm">
+   <div class="form-group">
+      <label>Cargo</label>
+      <input type="text" alt="Cargo" placeholder="Insira o cargo" formControlName="job_name"/>
+  </div>
+  <div class="form-group">
+     <label>Tipo de CBO</label>
+     <select alt="Tipo CBO">
+         <option value="1">CBO2002</option>
+         <option value="2">CBO94</option>
+     </select>
+ </div>
+ <div class="form-group">
+    <label>Código do CBO</label>
+    <input type="text" alt="Código do CBO" placeholder="Insira o Código do CBO" formControlName="CBO_code"/>
+ </div>
+  <div class="form-group">
+     <label>Grau de Instrução</label>
+     <input type="text" alt="Grau de instrução" placeholder="Insira o Grau de instrução"/>
+  </div>
+  <div class="form-group">
+     <label>Nível Hierárquico</label>
+     <input type="text" alt="Nível Hierárquico" placeholder="Insira o Nível Hierárquico"/>
+  </div>
+  <div class="form-group">
+     <label>Setor</label>
+     <input type="text" alt="Setor" placeholder="Insira o Setor"/>
+  </div>
+  <div class="form-group">
+     <label>Telefone do Setor</label>
+     <input type="text" alt="Telefone do Setor" placeholder="Insira o Telefone do Setor"/>
+  </div>
+  <div class="form-group">
+     <label>Descrição Detalhada</label>
+     <textarea type="text" alt="Descrição Detalhada" placeholder="Descrição detalhada do cargo"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Descrição para o PPP</label>
+     <textarea type="text" alt="Descrição para o PPP" placeholder="Descrição para o PPP"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Experiência Necessária</label>
+     <textarea type="text" alt="Experiência Necessária" placeholder="Experiência necessária para o cargo" formControlName="experience"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Competências Técnicas</label>
+     <textarea type="text" alt="Competências Técnicas" placeholder="Competências técnicas desejadas para o cargo"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Competências Comportamentais</label>
+     <textarea type="text" alt="Competências Comportamentais" placeholder="Competências comportamentais desejadas para o cargo"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Escolaridade/Instrução</label>
+     <textarea type="text" alt="Escolaridade/Instrução" placeholder="Escolaridade/Instrução necessária para o cargo" formControlName="education"></textarea>
+  </div>
+  <div class="form-group">
+     <label>Certificações Necessárias</label>
+     <textarea type="text" alt="Certificações Necessárias" placeholder="Certificações necessárias para o cargo"></textarea>
+  </div>
+  <div class="form-group">
+      <label>Data de Revisão</label>
+      <input type="date" alt="Data de Revisão" placeholder="Insira a data de revisão"/>
+  </div>
+</form>
+
+<div class="form-controls">
+   <button type="button" routerLink="/system/functions/list">Cancelar</button>
+   <button type="button" class="primary" routerLink="/system/functions/list">Salvar</button>
+</div>

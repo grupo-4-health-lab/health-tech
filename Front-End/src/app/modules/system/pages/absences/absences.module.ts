@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Page Components
-import { CreateCollaboratorsComponent } from './create/create.page';
-import { EditCollaboratorsComponent } from './edit/edit.page';
-import { ListCollaboratorsComponent } from './list/list.page';
+import { CreateAbsencesComponent } from './create/create.page';
+import { EditAbsencesComponent } from './edit/edit.page';
+import { ListAbsencesComponent } from './list/list.page';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
@@ -17,15 +17,15 @@ import { SharedModule } from 'src/app/shared/shared.module';
 const routes: Routes = [
     {
         path: '',
-        component: ListCollaboratorsComponent
+        component: ListAbsencesComponent
     },
     {
         path: 'create',
-        component: CreateCollaboratorsComponent
+        component: CreateAbsencesComponent
     },
     {
         path: 'edit',
-        component: EditCollaboratorsComponent
+        component: EditAbsencesComponent
     },
     {
         path: 'list',
@@ -36,9 +36,9 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [
-        ListCollaboratorsComponent,
-        CreateCollaboratorsComponent,
-        EditCollaboratorsComponent
+        CreateAbsencesComponent,
+        EditAbsencesComponent,
+        ListAbsencesComponent
     ],
     imports: [
         CommonModule,
@@ -52,4 +52,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class CollaboratorsModule { }
+export class AbsencesModule { }
