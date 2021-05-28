@@ -10,6 +10,7 @@ import { ListCollaboratorsComponent } from './list/list.page';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 // Internal routes
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
     ],
     imports: [
         CommonModule,
+        SharedModule,
         RouterModule.forChild(routes),
         IconModule
     ],

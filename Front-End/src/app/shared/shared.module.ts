@@ -1,6 +1,6 @@
 
 // Module
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Components
@@ -19,6 +19,7 @@ import { IconModule } from '@coreui/icons-angular';
     ],
     exports: [
         ModalComponent
-    ]
+    ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SharedModule { }

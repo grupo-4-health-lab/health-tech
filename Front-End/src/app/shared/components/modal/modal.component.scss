@@ -56,6 +56,11 @@
 
     &__body {
         margin: 0 16px 16px;
+        padding: 6px;
+
+        ::ng-deep * {
+            font-family: 'SourceSans';
+        }
     }
 
     &__footer {
@@ -63,6 +68,10 @@
         text-align: end;
         display: flex;
         justify-content: flex-end;
+
+        ::ng-deep button {
+            margin-left: 6px;
+        }
     }
 
     &--open {

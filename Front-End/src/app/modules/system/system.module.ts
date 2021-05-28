@@ -1,5 +1,5 @@
 // Module
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -16,7 +16,7 @@ import { ChartBoxComponent } from './pages/dashboard/chart-box/chart-box.compone
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { CollaboratorsModule } from './pages/collaborators/collaborators.module';
 
 // Internal routes
 const routes: Routes = [
@@ -52,15 +52,13 @@ const routes: Routes = [
     imports: [
         CommonModule,
         NgApexchartsModule,
-        SharedModule,
+        CollaboratorsModule,
         RouterModule.forChild(routes),
         IconModule
     ],
     exports: [
-        RouterModule
-    ],
-    schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
+        RouterModule,
+        CollaboratorsModule
     ]
 })
 export class SystemModule { }

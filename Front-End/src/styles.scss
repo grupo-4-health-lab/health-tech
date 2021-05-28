@@ -128,21 +128,61 @@ button {
   &.primary {
     background-color: $primary-color;
     color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $primary-color;
+    }
   }
 
   &.secondary {
     background-color: $secondary-color;
     color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $secondary-color;
+    }
   }
 
   &.tertiary {
     background-color: $tertiary-color;
     color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $tertiary-color;
+    }
   }
 
   &.dark {
     background-color: $dark-color;
     color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $dark-color;
+    }
+  }
+
+  &.alert {
+    background-color: $alert-color;
+    color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $alert-color;
+    }
+  }
+
+  &.warn {
+    background-color: $warn-color;
+    color: #fff;
+
+    &.flat {
+      background-color: transparent;
+      color: $warn-color;
+    }
   }
 }
 
@@ -199,11 +239,11 @@ button {
 
         thead {
             th {
-                padding: 4px 0;
-                font-family: 'Poppins';
+                padding: 10px 0;
+                font-family: "Poppins";
                 font-size: 14px;
-                font-weight: 400;
-                background-color: #f3f3f3;
+                font-weight: 300;
+                background-color: #f9fcff;
                 color: $label-color;
                 cursor: default;
             }
@@ -223,24 +263,32 @@ button {
                 font-family: 'SourceSans';
                 font-size: 14px;
                 font-weight: 400;
-                color: $label-color;
+                color: $input-color;
                 text-align: center;
             }
 
+            tr:hover {
+                background-color: #e3f2ff;
+                transition: .1s background-color;
+                cursor: pointer;
+            }
+
             td.row-option {
+                display: flex;
+                justify-content: space-evenly;
+
                 button {
-                    margin: auto;
+                    margin: auto 4px;
                     height: 32px;
                     line-height: 10px;
+                    padding: 2px;
+                    width: 32px;
+                    min-width: unset;
                 }
             }
 
             tr:not(:last-child) td {
                 border-bottom: 1px solid $box-border-color;
-            }
-
-            td:not(:last-child) {
-                border-right: 1px solid $box-border-color;
             }
         }
     }

@@ -1,14 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { cilPencil, cilTrash } from '@coreui/icons';
+import { IconSetService } from '@coreui/icons-angular';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'collaborators-list',
   templateUrl: './list.page.html',
-  styleUrls: ['./list.page.scss']
+  styleUrls: ['./list.page.scss'],
+  providers: [IconSetService]
 })
 export class ListCollaboratorsComponent implements OnInit {
-    public users: Array<{ name: string, field: string, email: string, cpf: string, state: string }> = [];
+    @ViewChild(ModalComponent) modal: ModalComponent;
 
-    constructor() { }
+    public users: Array<{ name: string, field: string, email: string, cpf: string, state: string }> = [];
+    public selectedUser: string = '';
+
+    constructor(public iconSet: IconSetService) {
+        iconSet.icons = {
+            cilPencil,
+            cilTrash
+        };
+    }
 
     ngOnInit(): void {
         this.users = [
@@ -41,5 +53,10 @@ export class ListCollaboratorsComponent implements OnInit {
                 state: 'Minas Gerais'
             }
         ];
+    }
+
+    public deleteUser(name: string): void {
+        this.selectedUser = name;
+        this.modal.toggleModal();
     }
 }
