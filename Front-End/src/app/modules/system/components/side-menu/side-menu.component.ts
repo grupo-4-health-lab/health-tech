@@ -35,4 +35,17 @@ export class SideMenuComponent {
     public toggleMenu(): void {
         this.opened = !this.opened;
     }
+
+    /**
+     * Fecha o menu, caso aberto
+     *
+     * @public
+     *
+     * @return {void}
+     */
+    public changeRoute(): void {
+        if (this.opened) {
+            this.opened = false;
+        }
+    }
 }

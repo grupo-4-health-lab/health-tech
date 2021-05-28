@@ -17,14 +17,50 @@ main {
         background-color: #f9fcff;
         box-shadow: 0px 2px 20px #0a327b;
         z-index: 1;
+        min-height: calc(100% - 114px);
 
         system-main-content {
             padding: 24px;
             width: calc(100% - 48px);
-            min-height: calc(100% - 114px);
+            height: calc(100% - 114px);
             overflow-y: auto;
             display: block;
         }
+    }
+}
+
+system-main-content::ng-deep .form-group input {
+    height: 20px;
+}
+
+system-main-content::ng-deep .form-group label {
+    font-size: 14px;
+    color: $label-color;
+}
+
+system-main-content::ng-deep .form-group input,
+system-main-content::ng-deep .form-group select,
+system-main-content::ng-deep .form-group textarea {
+    background-color: #f9fcff;
+}
+
+system-main-content::ng-deep form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    .form-group {
+        margin: 8px;
+        width: 150px;
+    }
+}
+
+system-main-content::ng-deep .form-controls {
+    margin: 12px 0 18px;
+    justify-content: flex-end;
+
+    button {
+        margin: 8px 0 0 6px;
     }
 }
 
@@ -44,8 +80,23 @@ main {
             border-top-left-radius: 0;
             box-shadow: 0;
             z-index: 0;
-            display: grid;
+            height: 100%;
         }
     }
 }
 
+
+// High-resolution mobiles
+@media screen and (max-width: 640px) {
+    system-main-content::ng-deep form .form-group {
+        width: 100%;
+    }
+
+    system-main-content::ng-deep form {
+        display: block;
+
+        .form-group {
+            margin: 8px 0;
+        }
+    }
+}

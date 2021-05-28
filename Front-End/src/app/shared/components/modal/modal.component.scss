@@ -19,7 +19,6 @@
     &__header {
         margin: 0 16px 6px;
         display: flex;
-        height: 56px;
         padding: 6px;
         border-bottom: 1px solid #e0e0e0;
 
@@ -32,8 +31,6 @@
                 font-size: 24px;
                 font-weight: 600;
                 margin: 0 0 8px;
-                height: 28px;
-                line-height: 28px;
             }
 
             ::ng-deep p {
@@ -56,6 +53,11 @@
 
     &__body {
         margin: 0 16px 16px;
+        padding: 6px;
+
+        ::ng-deep * {
+            font-family: 'SourceSans';
+        }
     }
 
     &__footer {
@@ -63,6 +65,10 @@
         text-align: end;
         display: flex;
         justify-content: flex-end;
+
+        ::ng-deep button {
+            margin-left: 6px;
+        }
     }
 
     &--open {
