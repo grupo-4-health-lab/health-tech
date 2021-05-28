@@ -1,13 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { cilPencil, cilTrash, cilPlus } from '@coreui/icons';
+import { cilPencil, cilTrash } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'absence-list',
   templateUrl: './list.page.html',
-  styleUrls: ['./list.page.scss']
+  styleUrls: ['./list.page.scss'],
+  providers: [IconSetService]
 })
 export class ListPage implements OnInit {
 
@@ -22,8 +23,7 @@ export class ListPage implements OnInit {
   ) {
     iconSet.icons = {
       cilPencil,
-      cilTrash,
-      cilPlus
+      cilTrash
     };
   }
 

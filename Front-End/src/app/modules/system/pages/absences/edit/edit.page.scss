@@ -2,7 +2,7 @@ form .form-group {
    width: 250px;
 }
 
-form input:disabled:hover,
-form select:disabled:hover {
+form input:read-only:hover,
+form select:read-only:hover {
    cursor: not-allowed;
 }

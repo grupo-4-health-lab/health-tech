@@ -1,0 +1,23 @@
+form .form-group label + textarea {
+   height: 35px ​!important;
+   resize: vertical;
+   font-family: "SourceSans";
+   font-size: 14px;
+}
+
+form textarea {
+   border-style: none;
+   border: 1px solid #b7b7b7;
+}
+form textarea:focus {
+   outline: none;
+   border:1px solid #8f8f8f
+}
+
+form .form-group {
+   width:250px
+}
+
+form textarea {
+   width: 100%;
+}

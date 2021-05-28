@@ -18,6 +18,7 @@ import { ChartBoxComponent } from './pages/dashboard/chart-box/chart-box.compone
 import { IconModule } from '@coreui/icons-angular';
 import { CollaboratorsModule } from './pages/collaborators/collaborators.module';
 import { AbsencesModule } from './pages/absences/absences.module';
+import { FunctionsRisksModule } from './pages/functions-risks/functions-risks.module';
 
 // Internal routes
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
             {
                 path: 'absences',
                 loadChildren: () => import('./pages/absences/absences.module').then(c => c.AbsencesModule)
+            },
+            {
+                path: 'functions',
+                loadChildren: () => import('./pages/functions-risks/functions-risks.module').then(c => c.FunctionsRisksModule)
             },
             {
                 path: '',
@@ -60,7 +65,8 @@ const routes: Routes = [
         CollaboratorsModule,
         RouterModule.forChild(routes),
         IconModule,
-        AbsencesModule
+        AbsencesModule,
+        FunctionsRisksModule
     ],
     exports: [
         RouterModule,

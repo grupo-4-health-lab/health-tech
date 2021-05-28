@@ -1,14 +1,14 @@
 <div class="page-header">
    <div class="page-header__info">
        <h1 class="page-header__info__title">
-           Absenteísmo
+           Funções e Riscos
        </h1>
        <p class="page-header__info__subtitle">
-           Lista de colaboradores ausentes
+           Lista de funções
        </p>
    </div>
    <div class="page-header__options">
-       <button class="primary" routerLink="/system/absences/create">
+       <button class="primary" routerLink="/system/functions/create">
            <span>Novo</span>
        </button>
    </div>
@@ -19,16 +19,19 @@
        <thead>
            <tr>
                <th>
-                   Nome
+                  Cargo
                </th>
                <th>
-                   Tipo
+                  Código CBO
                </th>
                <th>
-                   Data de Início
+                  Grau de Escolaridade
                </th>
                <th>
-                   Data de Término
+                  Experiência Necessária
+               </th>
+               <th>
+                  Data de Revisão
                </th>
                <th>
                    Ações
@@ -36,24 +39,27 @@
            </tr>
        </thead>
        <tbody>
-           <tr *ngFor="let user of users">
+           <tr *ngFor="let job of jobs">
                <td>
-                   {{ user.name }}
+                  {{ job.job_name }}
                </td>
                <td>
-                   {{ user.type }}
+                  {{ job.CBO_code }}
                </td>
                <td>
-                   {{ user.date_begin }}
+                  {{ job.education }}
                </td>
                <td>
-                   {{ user.date_end }}
+                  {{ job.experience }}
+               </td>
+               <td>
+                  {{ job.review_date }}
                </td>
                <td class="row-option">
-                   <button class="secondary flat" (click)="editUser(user)">
+                   <button class="secondary flat" (click)="editUser(job)">
                        <c-icon name="cil-pencil"></c-icon>
                    </button>
-                   <button class="warn flat" (click)="deleteUser(user.name)">
+                   <button class="warn flat" (click)="deleteUser(job.job_name)">
                        <c-icon name="cil-trash"></c-icon>
                    </button>
                </td>
@@ -64,14 +70,14 @@
 
 <app-modal>
    <ng-container header>
-       <h2>Excluir colaborador ausente</h2>
+       <h2>Excluir colaborador</h2>
        <p>
            Aviso: esta exclusão é irreversível.
        </p>
    </ng-container>
    <ng-container body>
        <p>
-           Tem certeza que deseja prosseguir com a exclusão do registro de ausência de <b>{{ selectedUser }}</b>?
+           Tem certeza que deseja prosseguir com a exclusão de <b>{{ selectedJob }}</b>?
        </p>
    </ng-container>
    <ng-container footer>
