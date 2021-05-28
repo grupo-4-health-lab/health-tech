@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Modules
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
@@ -27,8 +26,6 @@ import { SystemModule } from './modules/system/system.module';
         SystemModule,
         AuthModule,
         IconModule,
-        FormsModule,
-        ReactiveFormsModule,
         IconSetModule.forRoot()
     ],
     providers: [

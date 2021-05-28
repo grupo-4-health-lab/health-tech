@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Page Components
 import { CreateCollaboratorsComponent } from './create/create.page';
@@ -41,6 +42,8 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forChild(routes),
         IconModule
     ],

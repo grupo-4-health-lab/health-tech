@@ -19,7 +19,6 @@
     &__header {
         margin: 0 16px 6px;
         display: flex;
-        height: 56px;
         padding: 6px;
         border-bottom: 1px solid #e0e0e0;
 
@@ -32,8 +31,6 @@
                 font-size: 24px;
                 font-weight: 600;
                 margin: 0 0 8px;
-                height: 28px;
-                line-height: 28px;
             }
 
             ::ng-deep p {

@@ -8,7 +8,10 @@
         </p>
     </div>
     <div class="page-header__options">
-        <button class="primary">Novo</button>
+        <button class="primary" routerLink="/system/collaborators/create">
+            <span>Novo</span>
+            <c-icon name="cil-plus" size="xl"></c-icon>
+        </button>
     </div>
 </div>
 
@@ -29,7 +32,7 @@
                     CPF
                 </th>
                 <th>
-                    Estado
+                    Cidade
                 </th>
                 <th>
                     Ações
@@ -51,10 +54,10 @@
                     {{ user.cpf }}
                 </td>
                 <td>
-                    {{ user.state }}
+                    {{ user.city }}
                 </td>
                 <td class="row-option">
-                    <button class="secondary flat">
+                    <button class="secondary flat" (click)="editUser(user)">
                         <c-icon name="cil-pencil"></c-icon>
                     </button>
                     <button class="warn flat" (click)="deleteUser(user.name)">

@@ -77,25 +77,24 @@ body {
 .form-group {
   margin-bottom: 12px;
 
-  label {
-    font-family: 'SourceSans';
-    font-weight: 700;
-    color: $label-color;
-    font-size: 16px;
-  }
+    label {
+        font-family: 'SourceSans';
+        font-weight: 700;
+        color: $label-color;
+        font-size: 16px;
+    }
 
-  input, select {
-    display: block;
-    padding: 10px 0;
-    width: 100%;
-    font-family: 'SourceSans';
-    font-size: 14px;
-    color: $input-color;
-    outline: 0;
-    border-radius: 4px;
-    border-style: none;
-    border-bottom: 1px solid #b7b7b7;
-  }
+    input, select {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        font-family: 'SourceSans';
+        font-size: 14px;
+        color: $input-color;
+        outline: 0;
+        border-style: none;
+        border-bottom: 1px solid #b7b7b7;
+    }
 }
 
 .form-controls {

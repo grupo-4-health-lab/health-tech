@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { cilPencil, cilTrash } from '@coreui/icons';
+import { Router } from '@angular/router';
+import { cilPencil, cilTrash, cilPlus } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
@@ -12,13 +13,17 @@ import { ModalComponent } from 'src/app/shared/components/modal/modal.component'
 export class ListCollaboratorsComponent implements OnInit {
     @ViewChild(ModalComponent) modal: ModalComponent;
 
-    public users: Array<{ name: string, field: string, email: string, cpf: string, state: string }> = [];
+    public users: Array<{ name: string, field: string, email: string, cpf: string, city: string }> = [];
     public selectedUser: string = '';
 
-    constructor(public iconSet: IconSetService) {
+    constructor(
+        public iconSet: IconSetService,
+        public router: Router
+    ) {
         iconSet.icons = {
             cilPencil,
-            cilTrash
+            cilTrash,
+            cilPlus
         };
     }
 
@@ -29,32 +34,50 @@ export class ListCollaboratorsComponent implements OnInit {
                 field: 'Gerente de Setor',
                 email: 'joao.augusto@gmail.com',
                 cpf: '123.456.789-01',
-                state: 'Minas Gerais'
+                city: 'Belo Horizonte'
             },
             {
                 name: 'Marcos Vinícius',
                 field: 'Enfermeiro',
                 email: 'marcos111@hotmail.com',
                 cpf: '987.654.321-09',
-                state: 'São Paulo'
+                city: 'São Paulo'
             },
             {
                 name: 'Daniel de Souza',
                 field: 'Médico Plantonista',
                 email: 'danizinho1998@yahoo.com.br',
                 cpf: '485.172.943-32',
-                state: 'Minas Gerais'
+                city: 'Belo Horizonte'
             },
             {
                 name: 'Carolina das Neves',
                 field: 'Secretária',
                 email: 'carol.neves09@gmail.com',
                 cpf: '891.751.426-81',
-                state: 'Minas Gerais'
+                city: 'Belo Horizonte'
             }
         ];
     }
 
+    /**
+     * Redireciona para edição de usuário
+     *
+     * @public
+     *
+     * @return {void}
+     */
+    public editUser(user: { name: string, field: string, email: string, cpf: string, city: string }): void {
+        this.router.navigateByUrl('system/collaborators/edit', { state: user });
+    }
+
+    /**
+     * Abre modal para deleção de usuário
+     *
+     * @public
+     *
+     * @return {void}
+     */
     public deleteUser(name: string): void {
         this.selectedUser = name;
         this.modal.toggleModal();
