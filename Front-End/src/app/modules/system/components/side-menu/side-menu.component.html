@@ -12,7 +12,7 @@
                 <c-icon name="cil-group" size="lg"></c-icon>
                 <span>Colaboradores</span>
             </a>
-            <a class="side-menu__item">
+            <a class="side-menu__item" (click)="changeRoute()" routerLink="/system/absences" routerLinkActive="side-menu__item--active">
                 <c-icon name="cil-room" size="lg"></c-icon>
                 <span>Ausência</span>
             </a>
