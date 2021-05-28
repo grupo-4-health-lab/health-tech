@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './edit.page.html',
   styleUrls: ['./edit.page.scss']
 })
-export class EditPage implements OnInit {
+export class EditAbsencesComponent implements OnInit {
 
   public user: { name: string, type: string, date_begin: string, date_end: string };
   public dataForm: FormGroup;

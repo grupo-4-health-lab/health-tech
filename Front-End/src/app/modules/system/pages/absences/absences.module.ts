@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Page Components
-import { CreatePage } from './create/create.page';
-import { EditPage } from './edit/edit.page';
-import { ListPage } from './list/list.page';
+import { CreateAbsencesComponent } from './create/create.page';
+import { EditAbsencesComponent } from './edit/edit.page';
+import { ListAbsencesComponent } from './list/list.page';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
@@ -15,37 +15,41 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 // Internal routes
 const routes: Routes = [
-  {
-      path: 'list',
-      component: ListPage
-  },
-  {
-      path: 'create',
-      component: CreatePage
-  },
-  {
-      path: 'edit',
-      component: EditPage
-  },
-  {
-      path: '',
-      redirectTo: 'list',
-      pathMatch: 'full'
-  }
+    {
+        path: '',
+        component: ListAbsencesComponent
+    },
+    {
+        path: 'create',
+        component: CreateAbsencesComponent
+    },
+    {
+        path: 'edit',
+        component: EditAbsencesComponent
+    },
+    {
+        path: 'list',
+        redirectTo: '',
+        pathMatch: 'prefix'
+    }
 ];
 
 @NgModule({
-  declarations: [CreatePage, EditPage, ListPage],
-  imports: [
-    CommonModule,
-    SharedModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forChild(routes),
-    IconModule
-  ],
-  exports: [
-      RouterModule
-  ]
+    declarations: [
+        CreateAbsencesComponent,
+        EditAbsencesComponent,
+        ListAbsencesComponent
+    ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(routes),
+        IconModule
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 export class AbsencesModule { }

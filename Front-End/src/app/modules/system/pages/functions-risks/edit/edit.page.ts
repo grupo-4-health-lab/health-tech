@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './edit.page.html',
   styleUrls: ['./edit.page.scss']
 })
-export class EditPage implements OnInit {
+export class EditFunctionRiskComponent implements OnInit {
 
   public job: { job_name: string, CBO_code: string, hierarchy_level: string, sector: string, sector_phone: string };
   public dataForm: FormGroup;

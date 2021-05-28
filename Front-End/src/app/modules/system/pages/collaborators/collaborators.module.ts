@@ -16,7 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 // Internal routes
 const routes: Routes = [
     {
-        path: 'list',
+        path: '',
         component: ListCollaboratorsComponent
     },
     {
@@ -28,11 +28,12 @@ const routes: Routes = [
         component: EditCollaboratorsComponent
     },
     {
-        path: '',
-        redirectTo: 'list',
-        pathMatch: 'full'
+        path: 'list',
+        redirectTo: '',
+        pathMatch: 'prefix'
     }
 ];
+
 @NgModule({
     declarations: [
         ListCollaboratorsComponent,
