@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { cilPencil, cilTrash, cilPlus } from '@coreui/icons';
+import { cilPlus } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
@@ -15,6 +15,13 @@ export class ListAbsencesComponent implements OnInit {
     @ViewChild(ModalComponent) modal: ModalComponent;
 
     public users: Array<{ name: string, type: string, date_begin: string, date_end: string }> = [];
+    public gridColumns: Array<string> = [
+        'Nome',
+        'Tipo',
+        'Data de Início',
+        'Data de Término',
+        'Ações'
+    ];
     public selectedUser: string = '';
 
     constructor(
@@ -22,8 +29,6 @@ export class ListAbsencesComponent implements OnInit {
         public router: Router
     ) {
         iconSet.icons = {
-            cilPencil,
-            cilTrash,
             cilPlus
         };
     }

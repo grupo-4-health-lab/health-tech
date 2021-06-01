@@ -3,7 +3,7 @@ import { cilX } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
   providers: [IconSetService]

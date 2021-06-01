@@ -1,0 +1,69 @@
+@import '../../../../variables.scss';
+
+.table-content {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid $box-border-color;
+        border-spacing: 0;
+
+        thead {
+            th {
+                padding: 10px 0;
+                font-family: "Poppins";
+                font-size: 14px;
+                font-weight: 300;
+                background-color: #f9fcff;
+                color: $label-color;
+                cursor: default;
+            }
+
+            tr th {
+                border-bottom: 1px solid $box-border-color;
+            }
+
+            th:not(:last-child) {
+                border-right: 1px solid $box-border-color;
+            }
+        }
+
+        ::ng-deep tbody {
+            td {
+                padding: 4px 2px;
+                font-family: 'SourceSans';
+                font-size: 14px;
+                font-weight: 400;
+                color: $input-color;
+                text-align: center;
+            }
+
+            tr:hover {
+                background-color: #e3f2ff;
+                transition: .1s background-color;
+                cursor: pointer;
+            }
+
+            td.row-option {
+                display: flex;
+                justify-content: space-evenly;
+
+                button {
+                    margin: auto 4px;
+                    height: 32px;
+                    line-height: 10px;
+                    padding: 2px;
+                    width: 32px;
+                    min-width: unset;
+                }
+            }
+
+            tr:not(:last-child) td {
+                border-bottom: 1px solid $box-border-color;
+            }
+        }
+    }
+}

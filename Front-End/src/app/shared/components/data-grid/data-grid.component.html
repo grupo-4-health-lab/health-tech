@@ -1,0 +1,16 @@
+<div class="table-content">
+    <table>
+        <thead>
+            <tr>
+                <ng-container *ngFor="let column of columns">
+                    <th>
+                        {{ column }}
+                    </th>
+                </ng-container>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-content select="[rows]"></ng-content>
+        </tbody>
+    </table>
+ </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { cilPencil, cilTrash, cilPlus } from '@coreui/icons';
+import { cilPlus } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
@@ -15,6 +15,14 @@ export class ListFunctionRiskComponent implements OnInit {
     @ViewChild(ModalComponent) modal: ModalComponent;
 
     public jobs: Array<{ job_name: string, CBO_code: string, education: string, experience: string, review_date: string }> = [];
+    public gridColumns: Array<string> = [
+        'Cargo',
+        'Código CBO',
+        'Grau de Escolaridade',
+        'Experiência Necessária',
+        'Data de Revisão',
+        'Ações'
+    ];
     public selectedJob: string = '';
 
     constructor(
@@ -22,8 +30,6 @@ export class ListFunctionRiskComponent implements OnInit {
         public router: Router
     ) {
         iconSet.icons = {
-            cilPencil,
-            cilTrash,
             cilPlus
         };
     }
