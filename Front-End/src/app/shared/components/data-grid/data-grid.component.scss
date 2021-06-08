@@ -15,7 +15,7 @@
             th {
                 padding: 10px 0;
                 font-family: "Poppins";
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: 300;
                 background-color: #f9fcff;
                 color: $label-color;
@@ -47,7 +47,7 @@
                 cursor: pointer;
             }
 
-            td.row-option {
+            td.row-actions {
                 display: flex;
                 justify-content: space-evenly;
 
@@ -64,6 +64,59 @@
             tr:not(:last-child) td {
                 border-bottom: 1px solid $box-border-color;
             }
+        }
+    }
+}
+
+.cards-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+        margin-bottom: 12px;
+        padding: 8px 0;
+        border-radius: 8px;
+        width: 47.5%;
+        border: 1px solid #d4d4d4;
+
+        &__line {
+            padding: 0 12px;
+            margin-bottom: 4px;
+
+            label {
+                font-size: 12px;
+                font-family: "Poppins";
+                font-weight: 600;
+                color: $label-color;
+                cursor: default;
+                display: block;
+            }
+
+            span {
+                font-size: 14px;
+                font-family: "SourceSans";
+                font-weight: 400;
+                color: $description-color;
+                cursor: default;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+// Low-resolution mobiles
+@media screen and (max-width: 512px) {
+    .cards-content {
+        display: block;
+
+        .card {
+            margin: 0 auto 12px;
+            width: 100%;
         }
     }
 }

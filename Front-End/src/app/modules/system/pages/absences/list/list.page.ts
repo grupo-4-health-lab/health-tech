@@ -1,8 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { cilPlus } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
+
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
+
+import { IDataGridAction, IDataGridColumn } from 'src/app/shared/interfaces/data-grid.interface';
 
 @Component({
   selector: 'absence-list',
@@ -10,31 +13,29 @@ import { ModalComponent } from 'src/app/shared/components/modal/modal.component'
   styleUrls: ['./list.page.scss'],
   providers: [IconSetService]
 })
-export class ListAbsencesComponent implements OnInit {
-
+export class ListAbsencesComponent {
     @ViewChild(ModalComponent) modal: ModalComponent;
 
-    public users: Array<{ name: string, type: string, date_begin: string, date_end: string }> = [];
-    public gridColumns: Array<string> = [
-        'Nome',
-        'Tipo',
-        'Data de Início',
-        'Data de Término',
-        'Ações'
+    public gridColumns: Array<IDataGridColumn> = [
+        {
+            key: 'name',
+            label: 'Nome'
+        },
+        {
+            key: 'type',
+            label: 'Tipo'
+        },
+        {
+            key: 'date_begin',
+            label: 'Data de Início'
+        },
+        {
+            key: 'date_end',
+            label: 'Data de Término'
+        }
     ];
-    public selectedUser: string = '';
 
-    constructor(
-        public iconSet: IconSetService,
-        public router: Router
-    ) {
-        iconSet.icons = {
-            cilPlus
-        };
-    }
-
-    ngOnInit(): void {
-        this.users = [
+    public gridRows: Array<any> = [
         {
             name: 'João Augusto',
             type: 'Feriado',
@@ -59,29 +60,54 @@ export class ListAbsencesComponent implements OnInit {
             date_begin: '02/03/2021',
             date_end: '05/04/2021'
         }
-        ];
+    ];
+
+    public gridActions: Array<IDataGridAction> = [
+        {
+            icon: 'cil-pencil',
+            classes: 'secondary flat',
+            label: 'Editar',
+            handler: (user) => this.editAbsence(user)
+        },
+        {
+            icon: 'cil-trash',
+            classes: 'warn flat',
+            label: 'Excluir',
+            handler: ({ name }) => this.deleteAbsence(name)
+        }
+    ];
+
+    public selectedAbsence: string = '';
+
+    constructor(
+        public iconSet: IconSetService,
+        public router: Router
+    ) {
+        iconSet.icons = {
+            cilPlus
+        };
     }
 
     /**
-     * Redireciona para edição de usuário
+     * Redireciona para edição de ausência
      *
      * @public
      *
      * @return {void}
      */
-    public editUser(user: { name: string, type: string, date_begin: string, date_end: string }): void {
-        this.router.navigateByUrl('system/absences/edit', { state: user });
+    public editAbsence(absence: { name: string, type: string, date_begin: string, date_end: string }): void {
+        this.router.navigateByUrl('system/absences/edit', { state: absence });
     }
 
     /**
-     * Abre modal para deleção de usuário
+     * Abre modal para deleção de ausência
      *
      * @public
      *
      * @return {void}
      */
-    public deleteUser(name: string): void {
-        this.selectedUser = name;
+    public deleteAbsence(name: string): void {
+        this.selectedAbsence = name;
         this.modal.toggleModal();
     }
 }

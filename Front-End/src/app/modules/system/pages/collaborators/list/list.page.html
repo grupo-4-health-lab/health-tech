@@ -15,35 +15,7 @@
     </div>
 </div>
 
-<data-grid [columns]="gridColumns">
-    <ng-container rows>
-        <tr *ngFor="let user of users">
-            <td>
-                {{ user.name }}
-            </td>
-            <td>
-                {{ user.field }}
-            </td>
-            <td>
-                {{ user.email }}
-            </td>
-            <td>
-                {{ user.cpf }}
-            </td>
-            <td>
-                {{ user.city }}
-            </td>
-            <td class="row-option">
-                <button class="secondary flat" (click)="editUser(user)">
-                    <c-icon name="cil-pencil"></c-icon>
-                </button>
-                <button class="warn flat" (click)="deleteUser(user.name)">
-                    <c-icon name="cil-trash"></c-icon>
-                </button>
-            </td>
-        </tr>
-    </ng-container>
-</data-grid>
+<data-grid [columns]="gridColumns" [rows]="gridRows" [buttons]="gridActions"></data-grid>
 
 <modal>
     <ng-container header>

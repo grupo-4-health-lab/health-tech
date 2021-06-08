@@ -109,80 +109,85 @@ body {
 }
 
 button {
-  outline: 0;
-  border: 0;
-  display: block;
-  text-decoration: none;
-  padding: 12px 8px;
-  text-align: center;
-  background-color: #d6d6d6;
-  font-family: 'Poppins';
-  font-weight: 500;
-  font-size: 13px;
-  color: $label-color;
-  border-radius: 4px;
-  min-width: 70px;
-  cursor: pointer;
+    outline: 0;
+    border: 0;
+    display: flex;
+    text-decoration: none;
+    padding: 12px 8px;
+    justify-content: center;
+    background-color: #d6d6d6;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 13px;
+    color: $label-color;
+    border-radius: 4px;
+    min-width: 70px;
+    cursor: pointer;
 
-  &.primary {
-    background-color: $primary-color;
-    color: #fff;
-
-    &.flat {
-      background-color: transparent;
-      color: $primary-color;
+    c-icon {
+        transform: translateY(1px);
+        margin: 0 6px;
     }
-  }
 
-  &.secondary {
-    background-color: $secondary-color;
-    color: #fff;
+    &.primary {
+        background-color: $primary-color;
+        color: #fff;
 
-    &.flat {
-      background-color: transparent;
-      color: $secondary-color;
+        &.flat {
+        background-color: transparent;
+        color: $primary-color;
+        }
     }
-  }
 
-  &.tertiary {
-    background-color: $tertiary-color;
-    color: #fff;
+    &.secondary {
+        background-color: $secondary-color;
+        color: #fff;
 
-    &.flat {
-      background-color: transparent;
-      color: $tertiary-color;
+        &.flat {
+        background-color: transparent;
+        color: $secondary-color;
+        }
     }
-  }
 
-  &.dark {
-    background-color: $dark-color;
-    color: #fff;
+    &.tertiary {
+        background-color: $tertiary-color;
+        color: #fff;
 
-    &.flat {
-      background-color: transparent;
-      color: $dark-color;
+        &.flat {
+        background-color: transparent;
+        color: $tertiary-color;
+        }
     }
-  }
 
-  &.alert {
-    background-color: $alert-color;
-    color: #fff;
+    &.dark {
+        background-color: $dark-color;
+        color: #fff;
 
-    &.flat {
-      background-color: transparent;
-      color: $alert-color;
+        &.flat {
+        background-color: transparent;
+        color: $dark-color;
+        }
     }
-  }
 
-  &.warn {
-    background-color: $warn-color;
-    color: #fff;
+    &.alert {
+        background-color: $alert-color;
+        color: #fff;
 
-    &.flat {
-      background-color: transparent;
-      color: $warn-color;
+        &.flat {
+        background-color: transparent;
+        color: $alert-color;
+        }
     }
-  }
+
+    &.warn {
+        background-color: $warn-color;
+        color: #fff;
+
+        &.flat {
+        background-color: transparent;
+        color: $warn-color;
+        }
+    }
 }
 
 .apexcharts-menu-item {

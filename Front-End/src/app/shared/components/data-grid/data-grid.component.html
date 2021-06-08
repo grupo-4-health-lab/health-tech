@@ -1,16 +1,44 @@
-<div class="table-content">
-    <table>
-        <thead>
-            <tr>
-                <ng-container *ngFor="let column of columns">
-                    <th>
-                        {{ column }}
+<ng-container *ngIf="!isLowResolution">
+    <div class="table-content">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let column of columns">
+                        {{ column.label }}
                     </th>
-                </ng-container>
-            </tr>
-        </thead>
-        <tbody>
-            <ng-content select="[rows]"></ng-content>
-        </tbody>
-    </table>
- </div>
+                    <th *ngIf="buttons.length">
+                        Ações
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows">
+                    <td *ngFor="let column of columns">
+                        {{ row[column.key] }}
+                    </td>
+                    <td *ngIf="buttons.length" class="row-actions">
+                        <button *ngFor="let button of buttons" [class]="button.classes" (click)="button.handler(row)">
+                            <c-icon [name]="button.icon"></c-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>
+<ng-container *ngIf="isLowResolution">
+    <div class="cards-content">
+        <div class="card" *ngFor="let row of rows">
+            <div class="card__line" *ngFor="let column of columns">
+                <label>{{ column.label }}</label>
+                <span>{{ row[column.key] }}</span>
+            </div>
+            <div class="card__actions" *ngIf="buttons.length">
+                <button *ngFor="let button of buttons" [class]="button.classes" (click)="button.handler(row)">
+                    <c-icon [name]="button.icon"></c-icon>
+                    <span>{{ button.label }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>
