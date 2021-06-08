@@ -15,61 +15,9 @@
     </div>
 </div>
 
-<div class="table-content">
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Nome
-                </th>
-                <th>
-                    Cargo
-                </th>
-                <th>
-                    E-mail
-                </th>
-                <th>
-                    CPF
-                </th>
-                <th>
-                    Cidade
-                </th>
-                <th>
-                    Ações
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of users">
-                <td>
-                    {{ user.name }}
-                </td>
-                <td>
-                    {{ user.field }}
-                </td>
-                <td>
-                    {{ user.email }}
-                </td>
-                <td>
-                    {{ user.cpf }}
-                </td>
-                <td>
-                    {{ user.city }}
-                </td>
-                <td class="row-option">
-                    <button class="secondary flat" (click)="editUser(user)">
-                        <c-icon name="cil-pencil"></c-icon>
-                    </button>
-                    <button class="warn flat" (click)="deleteUser(user.name)">
-                        <c-icon name="cil-trash"></c-icon>
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<data-grid [columns]="gridColumns" [rows]="gridRows" [buttons]="gridActions"></data-grid>
 
-<app-modal>
+<modal>
     <ng-container header>
         <h2>Excluir colaborador</h2>
         <p>
@@ -89,4 +37,4 @@
             Excluir
         </button>
     </ng-container>
-</app-modal>
+</modal>

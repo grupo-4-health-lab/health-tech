@@ -15,55 +15,9 @@
    </div>
 </div>
 
-<div class="table-content">
-   <table>
-       <thead>
-           <tr>
-               <th>
-                   Nome
-               </th>
-               <th>
-                   Tipo
-               </th>
-               <th>
-                   Data de Início
-               </th>
-               <th>
-                   Data de Término
-               </th>
-               <th>
-                   Ações
-               </th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr *ngFor="let user of users">
-               <td>
-                   {{ user.name }}
-               </td>
-               <td>
-                   {{ user.type }}
-               </td>
-               <td>
-                   {{ user.date_begin }}
-               </td>
-               <td>
-                   {{ user.date_end }}
-               </td>
-               <td class="row-option">
-                   <button class="secondary flat" (click)="editUser(user)">
-                       <c-icon name="cil-pencil"></c-icon>
-                   </button>
-                   <button class="warn flat" (click)="deleteUser(user.name)">
-                       <c-icon name="cil-trash"></c-icon>
-                   </button>
-               </td>
-           </tr>
-       </tbody>
-   </table>
-</div>
+<data-grid [columns]="gridColumns" [rows]="gridRows" [buttons]="gridActions"></data-grid>
 
-<app-modal>
+<modal>
    <ng-container header>
        <h2>Cancelar ausência</h2>
        <p>
@@ -72,7 +26,7 @@
    </ng-container>
    <ng-container body>
        <p>
-           Tem certeza que deseja prosseguir com o cancelamento do registro de ausência de <b>{{ selectedUser }}</b>?
+           Tem certeza que deseja prosseguir com o cancelamento do registro de ausência de <b>{{ selectedAbsence }}</b>?
        </p>
    </ng-container>
    <ng-container footer>
@@ -83,4 +37,4 @@
            Excluir
        </button>
    </ng-container>
-</app-modal>
+</modal>

@@ -15,61 +15,9 @@
    </div>
 </div>
 
-<div class="table-content">
-   <table>
-       <thead>
-           <tr>
-               <th>
-                  Cargo
-               </th>
-               <th>
-                  Código CBO
-               </th>
-               <th>
-                  Grau de Escolaridade
-               </th>
-               <th>
-                  Experiência Necessária
-               </th>
-               <th>
-                  Data de Revisão
-               </th>
-               <th>
-                   Ações
-               </th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr *ngFor="let job of jobs">
-               <td>
-                  {{ job.job_name }}
-               </td>
-               <td>
-                  {{ job.CBO_code }}
-               </td>
-               <td>
-                  {{ job.education }}
-               </td>
-               <td>
-                  {{ job.experience }}
-               </td>
-               <td>
-                  {{ job.review_date }}
-               </td>
-               <td class="row-option">
-                   <button class="secondary flat" (click)="editUser(job)">
-                       <c-icon name="cil-pencil"></c-icon>
-                   </button>
-                   <button class="warn flat" (click)="deleteUser(job.job_name)">
-                       <c-icon name="cil-trash"></c-icon>
-                   </button>
-               </td>
-           </tr>
-       </tbody>
-   </table>
-</div>
+<data-grid [columns]="gridColumns" [rows]="gridRows" [buttons]="gridActions"></data-grid>
 
-<app-modal>
+<modal>
    <ng-container header>
        <h2>Excluir Função de Risco</h2>
        <p>
@@ -89,4 +37,4 @@
            Excluir
        </button>
    </ng-container>
-</app-modal>
+</modal>
