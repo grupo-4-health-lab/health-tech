@@ -3,9 +3,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'absences-edit',
-  templateUrl: './edit.page.html',
-  styleUrls: ['./edit.page.scss']
+    selector: 'absences-edit',
+    templateUrl: './edit.page.html',
+    styleUrls: [
+      './edit.page.scss',
+      '../../../system.page.scss'
+    ]
 })
 export class EditAbsencesComponent implements OnInit {
 

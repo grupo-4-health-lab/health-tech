@@ -74,40 +74,6 @@ body {
   position: relative;
 }
 
-.form-group {
-  margin-bottom: 12px;
-
-    label {
-        font-family: 'SourceSans';
-        font-weight: 700;
-        color: $label-color;
-        font-size: 16px;
-    }
-
-    input, select {
-        display: block;
-        padding: 10px 0;
-        width: 100%;
-        font-family: 'SourceSans';
-        font-size: 14px;
-        color: $input-color;
-        outline: 0;
-        border-style: none;
-        border-bottom: 1px solid #b7b7b7;
-    }
-}
-
-.form-controls {
-  margin-top: 28px;
-  display: flex;
-  justify-content: space-evenly;
-
-  button {
-    margin: 12px auto;
-    min-width: 128px;
-  }
-}
-
 button {
     outline: 0;
     border: 0;
@@ -226,6 +192,31 @@ button {
 
         button {
             margin: auto 0 auto 6px;
+
+            span {
+                display: block;
+            }
+
+            c-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+// High-resolution mobile
+@media screen and (max-width: 640px) {
+    .page-header__options button {
+        width: 42px;
+        height: 48px;
+        min-width: unset;
+
+        span {
+            display: none;
+        }
+
+        c-icon {
+            display: block;
         }
     }
 }

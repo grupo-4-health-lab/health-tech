@@ -3,8 +3,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'collaborators-edit',
-  templateUrl: './edit.page.html'
+    selector: 'collaborators-edit',
+    templateUrl: './edit.page.html',
+    styleUrls: [
+        '../../../system.page.scss'
+    ]
 })
 export class EditCollaboratorsComponent implements OnInit {
 

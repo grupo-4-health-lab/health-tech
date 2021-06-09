@@ -31,7 +31,7 @@
             }
         }
 
-        ::ng-deep tbody {
+        tbody {
             td {
                 padding: 4px 2px;
                 font-family: 'SourceSans';
@@ -58,6 +58,10 @@
                     padding: 2px;
                     width: 32px;
                     min-width: unset;
+
+                    c-icon {
+                        transform: translateY(6px);
+                    }
                 }
             }
 

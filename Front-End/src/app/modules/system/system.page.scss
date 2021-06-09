@@ -29,22 +29,56 @@ main {
     }
 }
 
-system-main-content::ng-deep .form-group input {
+.form-group {
+    margin-bottom: 12px;
+
+    label {
+        font-family: 'SourceSans';
+        font-weight: 700;
+        color: $label-color;
+        font-size: 16px;
+    }
+
+    input, select {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        font-family: 'SourceSans';
+        font-size: 14px;
+        color: $input-color;
+        outline: 0;
+        border-style: none;
+        border-bottom: 1px solid #b7b7b7;
+    }
+}
+
+.form-controls {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+        margin: 12px auto;
+        min-width: 128px;
+    }
+}
+
+.form-group input {
     height: 20px;
 }
 
-system-main-content::ng-deep .form-group label {
+.form-group label {
     font-size: 14px;
     color: $label-color;
 }
 
-system-main-content::ng-deep .form-group input,
-system-main-content::ng-deep .form-group select,
-system-main-content::ng-deep .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     background-color: #f9fcff;
 }
 
-system-main-content::ng-deep form {
+form {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -55,7 +89,7 @@ system-main-content::ng-deep form {
     }
 }
 
-system-main-content::ng-deep .form-controls {
+.form-controls {
     margin: 12px 0 18px;
     justify-content: flex-end;
 
