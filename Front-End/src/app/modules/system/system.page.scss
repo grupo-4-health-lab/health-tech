@@ -29,72 +29,54 @@ main {
     }
 }
 
-.form-group {
-    margin-bottom: 12px;
-
-    label {
-        font-family: 'SourceSans';
-        font-weight: 700;
-        color: $label-color;
-        font-size: 16px;
-    }
-
-    input, select {
-        display: block;
-        padding: 10px 0;
-        width: 100%;
-        font-family: 'SourceSans';
-        font-size: 14px;
-        color: $input-color;
-        outline: 0;
-        border-style: none;
-        border-bottom: 1px solid #b7b7b7;
-    }
-}
-
-.form-controls {
-    margin-top: 28px;
-    display: flex;
-    justify-content: space-evenly;
-
-    button {
-        margin: 12px auto;
-        min-width: 128px;
-    }
-}
-
-.form-group input {
-    height: 20px;
-}
-
-.form-group label {
-    font-size: 14px;
-    color: $label-color;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    background-color: #f9fcff;
-}
-
 form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-evenly;
 
     .form-group {
         margin: 8px;
-        width: 150px;
+        width: calc((100% / 4) - 64px);
+
+        label {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 13px;
+            color: $label-color;
+        }
+
+        input, select {
+            display: block;
+            padding: 10px 0;
+            width: 100%;
+            outline: 0;
+            border-style: none;
+            border-bottom: 1px solid #b7b7b7;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            font-family: 'SourceSans';
+            font-size: 14px;
+            color: $input-color;
+            background-color: #f9fcff;
+        }
     }
 }
 
 .form-controls {
     margin: 12px 0 18px;
+    display: flex;
     justify-content: flex-end;
 
     button {
         margin: 8px 0 0 6px;
+        min-width: 128px;
     }
 }
 
@@ -119,18 +101,21 @@ form {
     }
 }
 
-
 // High-resolution mobiles
-@media screen and (max-width: 640px) {
-    system-main-content::ng-deep form .form-group {
-        width: 100%;
+@media screen and (max-width: 896px) {
+    .form-group {
+        width: calc((100% / 3) - 48px) !important;
     }
+}
 
-    system-main-content::ng-deep form {
+// Low-resolution mobiles
+@media screen and (max-width: 640px) {
+    form {
         display: block;
 
         .form-group {
             margin: 8px 0;
+            width: 100% !important;
         }
     }
 }
