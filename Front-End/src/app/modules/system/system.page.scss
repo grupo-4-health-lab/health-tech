@@ -29,38 +29,54 @@ main {
     }
 }
 
-system-main-content::ng-deep .form-group input {
-    height: 20px;
-}
-
-system-main-content::ng-deep .form-group label {
-    font-size: 14px;
-    color: $label-color;
-}
-
-system-main-content::ng-deep .form-group input,
-system-main-content::ng-deep .form-group select,
-system-main-content::ng-deep .form-group textarea {
-    background-color: #f9fcff;
-}
-
-system-main-content::ng-deep form {
+form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-evenly;
 
     .form-group {
         margin: 8px;
-        width: 150px;
+        width: calc((100% / 4) - 64px);
+
+        label {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 13px;
+            color: $label-color;
+        }
+
+        input, select {
+            display: block;
+            padding: 10px 0;
+            width: 100%;
+            outline: 0;
+            border-style: none;
+            border-bottom: 1px solid #b7b7b7;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            font-family: 'SourceSans';
+            font-size: 14px;
+            color: $input-color;
+            background-color: #f9fcff;
+        }
     }
 }
 
-system-main-content::ng-deep .form-controls {
+.form-controls {
     margin: 12px 0 18px;
+    display: flex;
     justify-content: flex-end;
 
     button {
         margin: 8px 0 0 6px;
+        min-width: 128px;
     }
 }
 
@@ -85,18 +101,21 @@ system-main-content::ng-deep .form-controls {
     }
 }
 
-
 // High-resolution mobiles
-@media screen and (max-width: 640px) {
-    system-main-content::ng-deep form .form-group {
-        width: 100%;
+@media screen and (max-width: 896px) {
+    .form-group {
+        width: calc((100% / 3) - 48px) !important;
     }
+}
 
-    system-main-content::ng-deep form {
+// Low-resolution mobiles
+@media screen and (max-width: 640px) {
+    form {
         display: block;
 
         .form-group {
             margin: 8px 0;
+            width: 100% !important;
         }
     }
 }

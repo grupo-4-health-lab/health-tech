@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'functions-risks-create',
-  templateUrl: './create.page.html',
-  styleUrls: ['./create.page.scss']
+    selector: 'functions-risks-create',
+    templateUrl: './create.page.html',
+    styleUrls: [
+        './create.page.scss',
+        '../../../system.page.scss'
+    ]
 })
-export class CreateFunctionRiskComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class CreateFunctionRiskComponent {
+    constructor() { }
 }

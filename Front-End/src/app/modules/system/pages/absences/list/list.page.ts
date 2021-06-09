@@ -10,7 +10,6 @@ import { IDataGridAction, IDataGridColumn } from 'src/app/shared/interfaces/data
 @Component({
   selector: 'absence-list',
   templateUrl: './list.page.html',
-  styleUrls: ['./list.page.scss'],
   providers: [IconSetService]
 })
 export class ListAbsencesComponent {
