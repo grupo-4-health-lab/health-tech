@@ -1,0 +1,102 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           CIPA
+       </h1>
+       <p class="page-header__info__subtitle">
+           Lista de colaboradores CIPA
+       </p>
+   </div>
+   <div class="page-header__options">
+       <button class="primary" routerLink="/system/cipa/create">
+           <span>Novo Colaborador</span>
+           <c-icon name="cil-plus" size="xl"></c-icon>
+       </button>
+   </div>
+</div>
+
+<data-grid [columns]="gridColumnsCIPA" [rows]="gridRowsCIPA" [buttons]="gridActionsCIPA"></data-grid>
+
+<div class="divider"></div>
+
+<div class="page-header">
+    <div class="page-header__info">
+        <h1 class="page-header__info__title">
+            Reuniões CIPA
+        </h1>
+        <p class="page-header__info__subtitle">
+            Lista de reuniões CIPA
+        </p>
+    </div>
+    <div class="page-header__options">
+        <button class="primary" routerLink="/system/cipa/create-meeting">
+            <span>Nova Reunião</span>
+            <c-icon name="cil-plus" size="xl"></c-icon>
+        </button>
+    </div>
+ </div>
+ 
+ <data-grid [columns]="gridColumnsCIPAMeeting" [rows]="gridRowsCIPAMeeting" [buttons]="gridActionsCIPAMeeting"></data-grid>
+
+<modal #deleteCollaborator>
+   <ng-container header>
+       <h2>Excluir colaborador</h2>
+       <p>
+           Aviso: esta exclusão é irreversível.
+       </p>
+   </ng-container>
+   <ng-container body>
+       <p>
+           Tem certeza que deseja prosseguir com a exclusão de <b>{{ selectedCipaUser }}</b>?
+       </p>
+   </ng-container>
+   <ng-container footer>
+       <button (click)="deleteCollaboratorModal.toggleModal()">
+           Cancelar
+       </button>
+       <button class="warn" (click)="deleteCollaboratorModal.toggleModal()">
+           Excluir
+       </button>
+   </ng-container>
+</modal>
+
+<modal #deleteMeeting>
+    <ng-container header>
+        <h2>Excluir reunião</h2>
+        <p>
+            Aviso: esta exclusão é irreversível.
+        </p>
+    </ng-container>
+    <ng-container body>
+        <p>
+            Tem certeza que deseja prosseguir com a exclusão da <b>{{ selectedCipaMeeting }}</b>?
+        </p>
+    </ng-container>
+    <ng-container footer>
+        <button (click)="deleteMeetingModal.toggleModal()">
+            Cancelar
+        </button>
+        <button class="warn" (click)="deleteMeetingModal.toggleModal()">
+            Excluir
+        </button>
+    </ng-container>
+ </modal>
+
+<modal #designateCollaborator>
+   <ng-container header>
+       <h2>Indicar colaborador</h2>
+   </ng-container>
+   <ng-container body>
+       <p>
+           Tem certeza que deseja indicar o colaborador <b>{{ selectedCipaUser }}</b>?
+       </p>
+   </ng-container>
+   <ng-container footer>
+       <button (click)="designateModal.toggleModal()">
+           Cancelar
+       </button>
+       <button class="secondary" (click)="designateModal.toggleModal()">
+           Indicar
+       </button>
+   </ng-container>
+</modal>

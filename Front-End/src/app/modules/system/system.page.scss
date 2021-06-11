@@ -29,6 +29,10 @@ main {
     }
 }
 
+.divider {
+    padding:15px 0;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -65,6 +69,22 @@ form {
             font-size: 14px;
             color: $input-color;
             background-color: #f9fcff;
+        }
+
+        .radio-group {
+            display:flex;
+            margin-top: 5px;
+        }
+        
+        .radio-group input {
+            margin:0;
+            margin-right:5px;
+            width:14px;
+        }
+        
+        .radio-group label {
+            font-weight: normal;
+            font-size: 13px;
         }
     }
 }
