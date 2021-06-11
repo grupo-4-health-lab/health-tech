@@ -1,0 +1,43 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Monitoramento de EPI's
+       </h1>
+       <p class="page-header__info__subtitle">
+           Lista de EPI's
+       </p>
+   </div>
+   <div class="page-header__options">
+      <button class="secondary" routerLink="/system/epis/history">
+         <span>Histórico</span>
+      </button>
+      <button class="primary" routerLink="/system/epis/create">
+         <span>Novo</span>
+         <c-icon name="cil-plus" size="xl"></c-icon>
+      </button>
+   </div>
+</div>
+
+<data-grid [columns]="gridColumns" [rows]="gridRows" [buttons]="gridActions"></data-grid>
+
+<modal>
+   <ng-container header>
+       <h2>Excluir colaborador</h2>
+       <p>
+           Aviso: esta exclusão é irreversível.
+       </p>
+   </ng-container>
+   <ng-container body>
+       <p>
+           Tem certeza que deseja prosseguir com a exclusão de <b>{{ selectedEPI }}</b>?
+       </p>
+   </ng-container>
+   <ng-container footer>
+       <button (click)="modal.toggleModal()">
+           Cancelar
+       </button>
+       <button class="warn" (click)="modal.toggleModal()">
+           Excluir
+       </button>
+   </ng-container>
+</modal>
