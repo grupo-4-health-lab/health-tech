@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { cilRoom, cilFork, cilGroup, cilExitToApp, cilHome, cilHamburgerMenu } from '@coreui/icons';
+import { cilRoom, cilFork, cilGroup, cilExitToApp, cilHome, cilHamburgerMenu, cilDrop, cilClipboard, cilTask, cilShieldAlt } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 
 @Component({
@@ -21,7 +21,11 @@ export class SideMenuComponent {
             cilGroup,
             cilExitToApp,
             cilHome,
-            cilHamburgerMenu
+            cilHamburgerMenu,
+            cilDrop,
+            cilClipboard,
+            cilTask,
+            cilShieldAlt,
         };
     }
 
