@@ -40,6 +40,22 @@ const routes: Routes = [
                 loadChildren: () => import('./pages/functions-risks/functions-risks.module').then(c => c.FunctionsRisksModule)
             },
             {
+                path: 'vaccines',
+                loadChildren: () => import('./pages/vaccines/vaccines.module').then(c => c.VaccinesModule)
+            },
+            {
+                path: 'cipa',
+                loadChildren: () => import('./pages/cipa/cipa.module').then(c => c.CipaModule)
+            },
+            {
+                path: 'compulsory-training',
+                loadChildren: () => import('./pages/compulsory-training/compulsory-training.module').then(c => c.CompulsoryTrainingModule)
+            },
+            {
+                path: 'epis',
+                loadChildren: () => import('./pages/epis/epis.module').then(c => c.EpisModule)
+            },
+            {
                 path: '',
                 redirectTo: 'dashboard',
                 pathMatch: 'full'
