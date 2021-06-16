@@ -16,7 +16,7 @@ export class ListCompulsoryTrainingComponent {
 
   @ViewChild(ModalComponent) modal: ModalComponent;
 
-  public gridColumns: Array<IDataGridColumn> = [ 
+  public gridColumns: Array<IDataGridColumn> = [
       {
           key: 'type',
           label: 'Tipo'
@@ -38,13 +38,13 @@ export class ListCompulsoryTrainingComponent {
   public gridRows: Array<any> = [
       {
           type: 'Brigada de Incêndio',
-          risks: 'Morte por asfixia pela fumaça',
+          risks: 'Óbito por asfixia',
           date_begin: '12/05/2021',
           date_end: '12/07/2021'
       },
       {
           type: 'Inflamáveis e Combustíveis',
-          risks: 'Morte em chamas',
+          risks: 'Óbito por queimadura',
           date_begin: '12/05/2021',
           date_end: '01/07/2021'
       },
