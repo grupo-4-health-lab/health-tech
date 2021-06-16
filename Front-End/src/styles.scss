@@ -125,6 +125,16 @@ button {
         }
     }
 
+    &.quaternary {
+        background-color: $quaternary-color;
+        color: #fff;
+
+        &.flat {
+        background-color: transparent;
+        color: $quaternary-color;
+        }
+    }
+
     &.dark {
         background-color: $dark-color;
         color: #fff;

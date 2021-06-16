@@ -1,0 +1,46 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Reuniões CIPA
+       </h1>
+       <p class="page-header__info__subtitle">
+           Calendário de Reuniões CIPA
+       </p>
+   </div>
+   <div class="page-header__options">
+       <button class="primary" routerLink="/system/cipa-meetings/create-meeting">
+           <span>Nova Reunião</span>
+           <c-icon name="cil-plus" size="xl"></c-icon>
+       </button>
+   </div>
+</div>
+
+<div class="calendar">
+    <div class="calendar__info">
+        <div class="calendar__info__export">
+            <label>Exportar ata de reunião</label>
+            <button class="tertiary">
+                <span>Exportar Word</span>
+            </button>
+            <button class="quaternary">
+                <span>Exportar PDF</span>
+            </button>
+        </div>
+        <div class="calendar__info__import">
+            <label>Importar ata de reunião</label>
+            <button>
+                <span>Escolher Arquivo</span>
+            </button>
+        </div>
+        <div class="calendar__info__upcoming">
+            <label>Próximas Reuniões</label>
+            <div class="calendar__info__upcoming__items">
+                <div *ngFor="let meeting of upcomingMeetings">
+                    <label>{{ meeting.label }}</label>
+                    <span>{{ meeting.date.toLocaleString('pt-BR') }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+</div>

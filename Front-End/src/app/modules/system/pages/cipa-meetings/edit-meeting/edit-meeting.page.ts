@@ -22,7 +22,7 @@ export class EditCipaMeetingComponent implements OnInit {
       this.cipaMeeting = this.router.getCurrentNavigation()?.extras.state as any;
 
       if (!this.cipaMeeting) {
-          this.router.navigateByUrl('system/cipa/list');
+          this.router.navigateByUrl('system/cipa-meetings/');
       }
   }
 

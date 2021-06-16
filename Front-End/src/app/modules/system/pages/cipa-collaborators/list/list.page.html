@@ -8,7 +8,7 @@
        </p>
    </div>
    <div class="page-header__options">
-       <button class="primary" routerLink="/system/cipa/create">
+       <button class="primary" routerLink="/system/cipa-collaborators/create">
            <span>Novo Colaborador</span>
            <c-icon name="cil-plus" size="xl"></c-icon>
        </button>
@@ -29,13 +29,13 @@
         </p>
     </div>
     <div class="page-header__options">
-        <button class="primary" routerLink="/system/cipa/create-meeting">
+        <button class="primary" routerLink="/system/cipa-meetings/create-meeting">
             <span>Nova Reunião</span>
             <c-icon name="cil-plus" size="xl"></c-icon>
         </button>
     </div>
  </div>
- 
+
  <data-grid [columns]="gridColumnsCIPAMeeting" [rows]="gridRowsCIPAMeeting" [buttons]="gridActionsCIPAMeeting"></data-grid>
 
 <modal #deleteCollaborator>

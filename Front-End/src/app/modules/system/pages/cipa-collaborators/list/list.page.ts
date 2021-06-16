@@ -209,7 +209,7 @@ export class ListCipaComponent {
      * @return {void}
      */
     public editCipaUser(cipaUser: { name: string, registry: string, email: string, cpf: string, date: string }): void {
-        this.router.navigateByUrl('system/cipa/edit', { state: cipaUser });
+        this.router.navigateByUrl('system/cipa-collaborators/edit', { state: cipaUser });
     }
 
     /**
@@ -244,7 +244,7 @@ export class ListCipaComponent {
      * @return {void}
      */
      public editCipaMeeting(cipaMeeting: { name: string, description: string, date: string }): void {
-        this.router.navigateByUrl('system/cipa/edit-meeting', { state: cipaMeeting });
+        this.router.navigateByUrl('system/cipa-meetings/edit-meeting', { state: cipaMeeting });
     }
 
     /**

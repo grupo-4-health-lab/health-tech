@@ -8,8 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateCipaComponent } from './create/create.page';
 import { EditCipaComponent } from './edit/edit.page';
 import { ListCipaComponent } from './list/list.page';
-import { CreateCipaMeetingComponent } from './create-meeting/create-meeting.page';
-import { EditCipaMeetingComponent } from './edit-meeting/edit-meeting.page';
 
 // Modules
 import { IconModule } from '@coreui/icons-angular';
@@ -26,16 +24,8 @@ const routes: Routes = [
         component: CreateCipaComponent
     },
     {
-        path: 'create-meeting',
-        component: CreateCipaMeetingComponent
-    },
-    {
         path: 'edit',
         component: EditCipaComponent
-    },
-    {
-        path: 'edit-meeting',
-        component: EditCipaMeetingComponent
     },
     {
         path: 'list',
@@ -48,9 +38,7 @@ const routes: Routes = [
     declarations: [
         ListCipaComponent,
         CreateCipaComponent,
-        EditCipaComponent,
-        CreateCipaMeetingComponent,
-        EditCipaMeetingComponent
+        EditCipaComponent
     ],
     imports: [
         CommonModule,
@@ -64,4 +52,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class CipaModule { }
+export class CipaCollaboratorsModule { }

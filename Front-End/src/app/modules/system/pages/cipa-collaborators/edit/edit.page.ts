@@ -21,7 +21,7 @@ export class EditCipaComponent implements OnInit {
       this.cipaUser = this.router.getCurrentNavigation()?.extras.state as any;
 
       if (!this.cipaUser) {
-          this.router.navigateByUrl('system/cipa/list');
+          this.router.navigateByUrl('system/cipa-collaborators/list');
       }
   }
 

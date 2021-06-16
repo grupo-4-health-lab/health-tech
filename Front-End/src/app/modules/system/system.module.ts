@@ -44,8 +44,12 @@ const routes: Routes = [
                 loadChildren: () => import('./pages/vaccines/vaccines.module').then(c => c.VaccinesModule)
             },
             {
-                path: 'cipa',
-                loadChildren: () => import('./pages/cipa/cipa.module').then(c => c.CipaModule)
+                path: 'cipa-collaborators',
+                loadChildren: () => import('./pages/cipa-collaborators/cipa-collaborators.module').then(c => c.CipaCollaboratorsModule)
+            },
+            {
+                path: 'cipa-meetings',
+                loadChildren: () => import('./pages/cipa-meetings/cipa-meetings.module').then(c => c.CipaMeetingsModule)
             },
             {
                 path: 'compulsory-training',
