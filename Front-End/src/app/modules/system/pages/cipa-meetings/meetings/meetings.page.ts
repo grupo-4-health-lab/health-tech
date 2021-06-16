@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/angular';
+import { CalendarOptions, EventInput } from '@fullcalendar/angular';
 import { cilPlus } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 
@@ -13,6 +13,8 @@ import { IconSetService } from '@coreui/icons-angular';
   providers: [IconSetService]
 })
 export class CipaMeetingsComponent implements OnInit {
+    public events: Array<EventInput> = [];
+
     public calendarOptions: CalendarOptions = {
         initialView: 'dayGridMonth',
         locale: 'pt-BR',
@@ -22,12 +24,13 @@ export class CipaMeetingsComponent implements OnInit {
             week: 'Semana',
             day: 'Dia',
             list: 'Listagem'
-        }
+        },
+        events: this.events
     };
 
-    public meetings: Array<{ label: string, date: Date }> = [
+    private meetings: Array<{ label: string, date: Date }> = [
         {
-            label: 'Reunião de alinhamento CIPA',
+            label: 'Alinhamento CIPA',
             date: new Date(new Date().setDate(new Date().getDate() + 2))
         },
         {
@@ -36,7 +39,7 @@ export class CipaMeetingsComponent implements OnInit {
         },
         {
             label: 'Alinhamento de prazos CIPA',
-            date: new Date(new Date().setDate(new Date().getDate() + 4))
+            date: new Date(new Date().setDate(new Date().getDate() + 6))
         },
         {
             label: 'Comunicado Especial CIPA',
@@ -57,6 +60,16 @@ export class CipaMeetingsComponent implements OnInit {
     ngOnInit(): void {
         if (window.innerWidth > 1024) {
             this.calendarOptions.height = window.innerHeight - 256;
+        }
+
+        for (const meeting of this.meetings) {
+            this.events.push({
+                allDay: true,
+                start: meeting.date,
+                editable: false,
+                id: meeting.date.getTime().toString(),
+                title: meeting.label
+            });
         }
     }
 }
