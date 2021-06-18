@@ -1,0 +1,30 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Nova Reunião CIPA
+       </h1>
+       <p class="page-header__info__subtitle">
+           Inserir de dados da nova reunião CIPA
+       </p>
+   </div>
+</div>
+
+<form>
+   <div class="form-group">
+       <label>Nome</label>
+       <input type="text" alt="Nome da Reunião" placeholder="Insira o Nome da Reunião"/>
+   </div>
+   <div class="form-group">
+      <label>Descrição</label>
+      <textarea type="text" alt="Descrição da Reunião" placeholder="Insira a Descrição da Reunião"></textarea>
+   </div>
+   <div class="form-group">
+      <label>Data</label>
+      <input type="date" alt="Data" placeholder="Insira a Data da Reunião"/>
+   </div>
+</form>
+
+<div class="form-controls">
+   <button type="button" routerLink="/system/cipa-meetings/">Cancelar</button>
+   <button type="button" class="primary" routerLink="/system/cipa-meetings/">Salvar</button>
+</div>

@@ -74,6 +74,22 @@ body {
   position: relative;
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0 0 0 / 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0 0 0 / 25%);
+}
+
 button {
     outline: 0;
     border: 0;
@@ -122,6 +138,16 @@ button {
         &.flat {
         background-color: transparent;
         color: $tertiary-color;
+        }
+    }
+
+    &.quaternary {
+        background-color: $quaternary-color;
+        color: #fff;
+
+        &.flat {
+        background-color: transparent;
+        color: $quaternary-color;
         }
     }
 

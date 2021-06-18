@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { cilPencil, cilTrash } from '@coreui/icons';
+import { cilPencil, cilTrash, cilThumbUp } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 
 import { IDataGridAction, IDataGridColumn } from '../../interfaces/data-grid.interface';
@@ -19,6 +19,7 @@ export class DataGridComponent {
 
     constructor(public iconSet: IconSetService) {
         iconSet.icons = {
+            cilThumbUp,
             cilPencil,
             cilTrash
         };

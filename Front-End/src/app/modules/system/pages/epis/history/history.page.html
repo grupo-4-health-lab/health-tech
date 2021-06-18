@@ -1,0 +1,39 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Histórico de EPI
+       </h1>
+       <p class="page-header__info__subtitle">
+           Gerar histórico de EPI's
+       </p>
+   </div>
+</div>
+
+<form>
+   <div class="form-group">
+      <label>Tipo</label>
+      <select>
+         <option value="0">Todos os tipos</option>
+         <option value="1">Proteção auditiva</option>
+         <option value="2">Proteção respiratória</option>
+         <option value="3">Proteção visual e facial</option>
+         <option value="4">Proteção da cabeça</option>
+         <option value="5">Proteção de mãos e braços</option>
+         <option value="6">Proteção de pernas e pés</option>
+         <option value="7">Proteção contra quedas</option>
+     </select>
+   </div>
+   <div class="form-group">
+      <label>Data de Início</label>
+      <input type="date" alt="Data de Início" placeholder="Insira a Data de Início"/>
+   </div>
+   <div class="form-group">
+      <label>Data de Fim</label>
+      <input type="date" alt="Data de Fim" placeholder="Insira a Data de Fim"/>
+   </div>
+</form>
+
+<div class="form-controls">
+   <button type="button" routerLink="/system/epis/list">Cancelar</button>
+   <button type="button" class="primary" routerLink="/system/epis/list">Gerar Histórico</button>
+</div>

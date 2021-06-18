@@ -1,0 +1,50 @@
+<div class="page-header">
+   <div class="page-header__info">
+       <h1 class="page-header__info__title">
+           Novo EPI
+       </h1>
+       <p class="page-header__info__subtitle">
+           Alteração de dados de EPI
+       </p>
+   </div>
+</div>
+
+<form [formGroup]="dataForm">
+   <div class="form-group">
+      <label>Tipo</label>
+      <select>
+         <option value="1">Proteção auditiva</option>
+         <option value="2">Proteção respiratória</option>
+         <option value="3">Proteção visual e facial</option>
+         <option value="4">Proteção da cabeça</option>
+         <option value="5">Proteção de mãos e braços</option>
+         <option value="6">Proteção de pernas e pés</option>
+         <option value="7">Proteção contra quedas</option>
+     </select>
+   </div>
+   <div class="form-group">
+      <label>Descrição</label>
+      <textarea type="text" alt="Descrição" placeholder="Insira a Descrição do EPI" formControlName="description"></textarea>
+   </div>
+   <div class="form-group">
+      <label>Certificado de Aprovação</label>
+      <input type="file"/>
+   </div>
+   <div class="form-group">
+      <label>Quantidade em Estoque</label>
+      <input type="number" alt="Quantidade em Estoque" placeholder="Insira a Quantidade em Estoque" min="1" formControlName="qnt_stock"/>
+   </div>
+   <div class="form-group">
+      <label>Data de Início</label>
+      <input type="date" alt="Data de Início" placeholder="Insira a Data de Início"/>
+   </div>
+   <div class="form-group">
+      <label>Data de Fim</label>
+      <input type="date" alt="Data de Fim" placeholder="Insira a Data de Fim"/>
+   </div>
+</form>
+
+<div class="form-controls">
+   <button type="button" routerLink="/system/epis/list">Cancelar</button>
+   <button type="button" class="primary" routerLink="/system/epis/list">Salvar</button>
+</div>
