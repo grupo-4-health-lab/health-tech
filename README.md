@@ -19,14 +19,16 @@ Contém os arquivos de design e resumo das telas em PDF
 ### Configurando o ambiente
 - Certifique-se que o NodeJS está instalado (versão `10.15.0`)
 - Execute o seguinte comando dentro da pasta Front-End no seu terminal
-<br>
-`npm install --from-lock-file`
+```
+npm install --from-lock-file
+```
 
 ### Executando o projeto
 - O projeto foi feito utilizando o Angular (versão `11`)
 - Execute o seguinte comando dentro da pasta Front-End no seu terminal
-<br>
-`ng serve`
+```
+ng serve
+```
 
 ## Back-End
 ### *Em construção*
